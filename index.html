@@ -15,7 +15,7 @@
     var g1 = {x:c.width - 10, y:getHeight(), r:7, speed: 2};
     var g2 = {x:c.width - 10, y:getHeight(), r:7, speed: 1.5};
     var player = {x:10, y:5, r:7, speed:8};
-    var logistics = {score:0,level:1, lives:3};
+    var logistics = {score:8000,level:1, lives:3};
 
     //Background image of the canvas
     var backgroundImg = new Image();
@@ -115,7 +115,7 @@
       if (logistics.score >= 300 && logistics.level == 1) {
         logistics.level = 2;
         g1.speed += 0.25;
-        g2.speed += 0.1;
+        g2.speed += 1.0;
       } 
       else if (logistics.score >= 600 && logistics.level == 2) {
         logistics.level = 3;
@@ -135,7 +135,7 @@
       else if (logistics.score >= 2000 && logistics.level == 5) {
         logistics.level = 6;
         g1.speed += 0.7;
-        g2.speed += 1.5;
+        g2.speed += 0.5;
       }
       else if (logistics.score >= 3500 && logistics.level == 6) {
         logistics.level = 7;
@@ -145,17 +145,17 @@
       else if (logistics.score >= 5000 && logistics.level == 7) {
         logistics.level = 8;
         g1.speed += 1.0;
-        g2.speed += 1.2;
+        g2.speed += 0.8;
       }
       else if (logistics.score >= 6000 && logistics.level == 8) {
         logistics.level = 9;
-        g1.speed += 1.2;
-        g2.speed += 1.6;
+        g1.speed += 1.5;
+        g2.speed += 0.9;
       }
       else if (logistics.score >= 8000 && logistics.level == 9) {
         logistics.level = 10;
-        g1.speed += 2;
-        g2.speed += 2;
+        g1.speed += 3;
+        g2.speed += 1.0;
       }
 
       //Draw text
